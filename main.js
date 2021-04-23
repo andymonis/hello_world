@@ -5,7 +5,7 @@ class Main {
     constructor(){
         document.getElementById("btn-echo").addEventListener("click",()=>{
             let el = document.getElementById("output");
-            el.innerText = `echo ${Date.now()}`;
+            el.innerText += `Hello ${Date.now()}\n`;
         });
     }
 }

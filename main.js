@@ -3,10 +3,13 @@
  */
 class Main {
     constructor(){
-        document.getElementById("btn-echo").addEventListener("click",()=>{
-            let el = document.getElementById("output");
-            el.innerText += `Hello ${Date.now()}\n`;
-        });
+        this.init();
+    }
+
+    init(){
+        setInterval(()=>{
+            document.querySelector("#output").innerText=new Date().toLocaleString();
+        },1000)
     }
 }
 
